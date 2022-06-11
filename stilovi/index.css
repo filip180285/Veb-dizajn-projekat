@@ -1,0 +1,116 @@
+#heder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #B1C1C0;
+}
+
+#logo {
+    width: 150px;
+    height: 70px;
+    padding-top: 5px;
+}
+
+#naslov {
+    color: orangered;
+    font-weight: bold;
+    font-style: italic;
+    padding-top: 20px;
+}
+
+.orangered {
+    color: orangered;
+}
+
+#jezici {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#jezici img {
+    width: 50px;
+    height: 25px;
+}
+
+#meni {
+    background-color: #B1C1C0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    font-size: x-large;
+}
+
+#meni a {
+    color: white;
+    text-decoration: none;
+}
+
+#meni a:hover {
+    color: orangered;
+}
+
+.sredina {
+    background-color: grey;
+    color: white;
+}
+
+ul.breadcrumb {
+    list-style: none;
+    background-color: transparent;
+    color: white;
+    font-size: large;
+}
+
+hr {
+    height: 2px;
+    background-color: white;
+    border: none;
+}
+
+.novo {
+    font-size: 40px;
+}
+
+.novo img {
+    width: 100%;
+    height: 500px;
+}
+
+.novo img:hover {
+    border: 10px solid orangered;
+}
+
+.blog{
+    color:black;
+}
+
+.blog img {
+    height: 250px;
+}
+
+.baner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: x-large;
+}
+
+.baner a {
+    color: white;
+}
+
+.baner a:hover {
+    color: orangered;
+    text-decoration: none;
+}
+
+
+.footer {
+    background-color: #B1C1C0;
+    font-style: italic;
+    font-weight: bold;
+    font-size: large;
+}
