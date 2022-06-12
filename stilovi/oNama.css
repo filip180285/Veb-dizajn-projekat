@@ -1,0 +1,19 @@
+.sredina{
+    font-size: large;
+}
+
+.sredina img{
+    height: 500px;
+    margin-bottom: 20px;
+}
+
+.nagrade{
+    font-size: larger;
+}
+.nagrade img{
+    height: 300px;
+}
+
+.nagrade a{
+    color: lightgreen;
+}
