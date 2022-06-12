@@ -1,0 +1,17 @@
+.boja{
+    background-color: #B1C1C0;
+    margin-bottom: 200px;
+    margin-top: 50px;
+}
+
+#korisnickoIme,#lozinka,#ime,#prezime,#korisnickoImeReg,#lozinkaReg{
+    width: 80%;
+}
+
+h2{
+    color: orangered;
+}
+
+#loginBtn,#regBtn{
+    width: 40%;
+}
