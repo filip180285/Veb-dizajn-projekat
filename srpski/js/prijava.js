@@ -29,6 +29,7 @@ $(document).ready(function () {
         }
 
         alert("Uspešna prijava!")
+        localStorage.setItem("ulogovaniKorisnik", korisnicko_ime)
         window.location.href = "index.html";
     }
 
