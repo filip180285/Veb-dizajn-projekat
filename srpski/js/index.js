@@ -40,7 +40,9 @@ $(document).ready(function () {
             zivotinje = JSON.parse(localStorage.getItem("zivotinje"))
         } else { // inicijalizacija niza zivotinja
             zivotinje = [{
+                id:1,
                 ime: 'Mile',
+                vrsta:'pas',
                 opis: 'Nemački ovčar, guste crno-smeđe dlake i crnih očiju.Star dve godine, umiljat i druželjubiv.',
                 tezina: '40kg',
                 godine: 2,
@@ -48,7 +50,9 @@ $(document).ready(function () {
                 video: 'pas1.mp4'
             },
             {
+                id:2,
                 ime: 'Leni',
+                vrsta:'pas',
                 opis: 'Ženka labrador retirvera, stara 5 godina.Ima kratku belu dlaku.Vesela i uvek raspoložena za igranje.',
                 tezina: '35kg',
                 godine: 5,
@@ -56,7 +60,9 @@ $(document).ready(function () {
                 video: 'pas1.mp4'
             },
             {
+                id:3,
                 ime: 'Zoki',
+                vrsta:'pas',
                 opis: 'Osmogodišnji mužjak zlatnog retirvera.Krasi ga gusta zlatna dlaka, blaga narav i ljubav prema deci.',
                 tezina: '32kg',
                 godine: 8,
@@ -64,7 +70,9 @@ $(document).ready(function () {
                 video: 'pas1.mp4'
             },
             {
+                id:4,
                 ime: 'Lea',
+                vrsta:'macka',
                 opis: 'Trogodišnja ženka bengalske mačke.Ima žutu dlaku sa crnim prugastim šarama i zelene oči.Društvena i aktivna.',
                 tezina: '6kg',
                 godine: 3,
@@ -72,7 +80,9 @@ $(document).ready(function () {
                 video: 'macka1.mp4'
             },
             {
+                id:5,
                 ime: 'Roki',
+                vrsta:'macka',
                 opis: 'Mužjak persijske mačke, guste bele dlake i crnog repa.Živahan i veseo.Star 7 godina.',
                 tezina: '8kg',
                 godine: 7,
@@ -80,7 +90,9 @@ $(document).ready(function () {
                 video: 'macka1.mp4'
             },
             {
+                id:6,
                 ime: 'Maks',
+                vrsta:'macka',
                 opis: 'Persijska mačka, mužjak star 4 godine.Kratka krem dlaka, plave oči i crni rep. Komunikativan i druželjubiv.',
                 tezina: '7kg',
                 godine: 4,
@@ -88,7 +100,9 @@ $(document).ready(function () {
                 video: 'macka1.mp4'
             },
             {
+                id:7,
                 ime: 'Pera',
+                vrsta:'ptica',
                 opis: 'Mužjak kakadu papagaja.Star 40 godina.Belo perje, bledo žut na krilima i repu, veliki beli greben, crni kljun.',
                 tezina: '700g',
                 godine: 40,
@@ -96,7 +110,9 @@ $(document).ready(function () {
                 video: 'ptica1.mp4'
             },
             {
+                id:8,
                 ime: 'Viki',
+                vrsta:'ptica',
                 opis: 'Trogodišnja ženka goluba.',
                 tezina: '220g',
                 godine: 3,
@@ -104,7 +120,9 @@ $(document).ready(function () {
                 video: 'ptica1.mp4'
             },
             {
+                id:9,
                 ime: 'Alfred',
+                vrsta:'ptica',
                 opis: 'Mužjak plave are.Star 24 godine.Puno plavo perje, žute mrlje oko očiju i kljuna, crni kljun, tamno sive noge.',
                 tezina: '1kg',
                 godine: 24,

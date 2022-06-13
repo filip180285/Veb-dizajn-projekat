@@ -1,0 +1,14 @@
+#psi img {
+    width: 600px;
+    height: 600px;
+}
+
+#psi img:hover {
+    border: 10px solid orangered;
+    cursor: pointer;
+}
+
+#psi {
+    font-size: 50px;
+    font-style: italic;
+}
