@@ -28,6 +28,10 @@
     justify-content: space-around;
 }
 
+.ptr {
+    cursor: pointer;
+}
+
 #jezici img {
     width: 50px;
     height: 25px;
@@ -83,8 +87,8 @@ hr {
     border: 10px solid orangered;
 }
 
-.blog{
-    color:black;
+.blog {
+    color: black;
 }
 
 .blog img {
@@ -107,7 +111,7 @@ hr {
     text-decoration: none;
 }
 
-.oglas{
+.oglas {
     font-size: larger;
 }
 

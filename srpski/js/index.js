@@ -181,4 +181,19 @@ $(document).ready(function () {
 
     inicijalizacija();
     postaviTriNajnovijaOglasa();
+
+    $("#1").click(function(){
+        localStorage.setItem("soloZivotinja", 1);
+        window.location.href = "soloZivotinja.html";
+    });
+
+    $("#4").click(function(){
+        localStorage.setItem("soloZivotinja", 4);
+        window.location.href = "soloZivotinja.html";
+    });
+
+    $("#7").click(function(){
+        localStorage.setItem("soloZivotinja", 7);
+        window.location.href = "soloZivotinja.html";
+    });
 });
