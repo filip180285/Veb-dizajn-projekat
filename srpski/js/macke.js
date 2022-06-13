@@ -19,7 +19,7 @@ $(document).ready(function () {
         slika.addClass("rounded-circle")
         slika.attr("id", macke[i].id)
 
-        $("#macke").append("<hr>").append(slika).append("<br>").append(ime);
+        $("#macke").append("<hr>").append(slika).append("<br>").append(ime +"("+macke[i].godine + ")");
     }
 
     $("#macke img").click(function () {

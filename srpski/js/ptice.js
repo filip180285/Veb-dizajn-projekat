@@ -19,7 +19,7 @@ $(document).ready(function () {
         slika.addClass("rounded-circle")
         slika.attr("id", ptice[i].id)
 
-        $("#ptice").append("<hr>").append(slika).append("<br>").append(ime);
+        $("#ptice").append("<hr>").append(slika).append("<br>").append(ime +"("+ptice[i].godine + ")");
     }
 
     $("#ptice img").click(function () {
