@@ -123,7 +123,7 @@ $(document).ready(function () {
                 id:9,
                 ime: 'Alfred',
                 vrsta:'ptica',
-                opis: 'Mužjak plave are.Star 24 godine.Puno plavo perje, žute mrlje oko očiju i kljuna, crni kljun, tamno sive noge.',
+                opis: 'Mužjak plave are.Star 24 godine.Puno plavo-žuto perje, žute mrlje oko očiju i kljuna, crni kljun, tamno sive noge.',
                 tezina: '1kg',
                 godine: 24,
                 slika: 'ptica3.jpg',

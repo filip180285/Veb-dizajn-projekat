@@ -21,14 +21,17 @@
 
 #pasMeni:hover{
     border: 5px dashed red;
+    cursor: pointer;
 }
 
 #mackaMeni:hover{
     border: 5px dashed red;
+    cursor: pointer;
 }
 
 #pticaMeni:hover{
     border: 5px dashed red;
+    cursor: pointer;
 }
 
 .meni{
