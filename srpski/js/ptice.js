@@ -10,22 +10,85 @@ $(document).ready(function () {
             //alert(zivotinje[i].ime)
         }
     }
+    function prikaziSlikeIdodajDogadjaje() {
+        $("#ptice").empty();
+        for (let i = 0; i < ptice.length; i++) {
+            let ime = ptice[i].ime;
+            let putanjaDoSlike = "../../slike/" + ptice[i].slika;
 
-    for (let i = 0; i < ptice.length; i++) {
-        let ime = ptice[i].ime;
-        let putanjaDoSlike = "../../slike/" + ptice[i].slika;
+            let slika = $("<img>").attr("src", putanjaDoSlike)
+            slika.addClass("rounded-circle")
+            slika.attr("id", ptice[i].id)
 
-        let slika = $("<img>").attr("src", putanjaDoSlike)
-        slika.addClass("rounded-circle")
-        slika.attr("id", ptice[i].id)
+            $("#ptice").append("<hr>").append(slika).append("<br>").append(ime + "(" + ptice[i].godine + ")");
+        }
 
-        $("#ptice").append("<hr>").append(slika).append("<br>").append(ime +"("+ptice[i].godine + ")");
+        $("#ptice img").click(function () {
+            //alert($(this).attr("id"));
+            localStorage.setItem("soloZivotinja", $(this).attr("id"));
+            window.location.href = "soloZivotinja.html";
+            return;
+        });
     }
 
-    $("#ptice img").click(function () {
-        //alert($(this).attr("id"));
-        localStorage.setItem("soloZivotinja", $(this).attr("id"));
-        window.location.href = "soloZivotinja.html";
-        return;
-    });
+    function sortiraj() {
+        //alert("test")
+        let vrsta, nacin;
+        if ($("#godine").prop("checked")) vrsta = "godine";
+        else vrsta = "naziv";
+
+        if ($("#rastuce").prop("checked")) nacin = "rastuce";
+        else nacin = "opadajuce";
+
+        //alert(vrsta + nacin)
+
+        let pom;
+        if (vrsta == "godine") {
+            for (let i = 0; i < ptice.length - 1; i++) {
+                for (let j = i + 1; j < ptice.length; j++) {
+                    switch (nacin) {
+                        case ("rastuce"):
+                            if (ptice[i].godine > ptice[j].godine) {
+                                pom = ptice[i]; ptice[i] = ptice[j]; ptice[j] = pom;
+                            }
+                            break;
+
+                        case ("opadajuce"):
+                            if (ptice[i].godine < ptice[j].godine) {
+                                pom = ptice[i]; ptice[i] = ptice[j]; ptice[j] = pom;
+                            }
+                            break;
+                    }
+                }
+            }
+        }
+
+        else if (vrsta == "naziv") {
+            for (let i = 0; i < ptice.length - 1; i++) {
+                for (let j = i + 1; j < ptice.length; j++) {
+                    switch (nacin) {
+                        case ("rastuce"):
+                            if (ptice[i].ime.localeCompare(ptice[j].ime) == 1) {
+                                pom = ptice[i]; ptice[i] = ptice[j]; ptice[j] = pom;
+                            }
+                            break;
+
+                        case ("opadajuce"):
+                            if (ptice[i].ime.localeCompare(ptice[j].ime) == -1) {
+                                pom = ptice[i]; ptice[i] = ptice[j]; ptice[j] = pom;
+                            }
+                            break;
+                    }
+                }
+            }
+        }
+
+        prikaziSlikeIdodajDogadjaje();
+    }
+
+    prikaziSlikeIdodajDogadjaje();
+    $("input[type = 'radio']").click(sortiraj);
+    sortiraj();
+
+    //alert($("vrstaSorta").prop("checked"))
 })

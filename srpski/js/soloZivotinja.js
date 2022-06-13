@@ -10,6 +10,21 @@ $(document).ready(function () {
         }
     }
 
+    let vrsta = zivotinja.vrsta;
+    switch (vrsta) {
+        case ("pas"):
+            vrsta = "Psi";
+            break;
+        case ("macka"):
+            vrsta = "Macke";
+            break;
+        case ("ptica"):
+            vrsta = "Ptice";
+            break;
+    }
+
+    $("#nazivStranice").text("/Životinje" + "/" + vrsta + "/" + zivotinja.ime);
+
     let putanjaDoSlike = "../../slike/" + zivotinja.slika;
     let putanjaDoVidea = "../../video/" + zivotinja.video;
     //alert(putanjaDoVidea);
