@@ -139,25 +139,28 @@ $(document).ready(function () {
         } else { // inicijalizacija niza oglasa
             oglasi = [{
                 id: 1,
+                korisnik:'filip',
                 naziv_zivotinje: 'Mina',
                 opis: 'Mina, ženka Šar-planinca stara 7 meseci nestala je 10.05.2022. na Avali, Put za Markoviće, Beograd. Ima braon kožnu ogrlicu. Umiljata je i druželjubiva. Nalazaču sledi nagrada.',
-                telefon: '+381 66 20 50 929',
+                telefon: '+381 66 20-50-929',
                 datumVreme: '10/01/2022',
                 dodati_komentari: []
             },
             {
                 id: 2,
+                korisnik:'teodora',
                 naziv_zivotinje: 'Mici',
                 opis: 'Nestala maca u Subotickoj ulici na Telepu. Odaziva se na ime: Mici. Cipovana je. Ako je neko vidi molim vas da je zadrzite i da mi se javite na ovaj broj Pronalazacu sledi nagrada.',
-                telefon: '+381 66 25 30 151',
+                telefon: '+381 66 25-30-151',
                 datumVreme: '17/05/2022',
                 dodati_komentari: []
             },
             {
                 id: 3,
+                korisnik:'teodora',
                 naziv_zivotinje: 'Bata',
                 opis: 'Mačak uzrasta od godinu dana, nestao je pre oko 3 nedelje bez traga. Odaziva se na ime Bata. Krupan je, ima dugu dlaku, zelene zrikave oči, braon-bele boje. Na teritoriji Beograda, blizu opštine Mladenovac. Ako ga neko vidi molim Vas neka me kontaktira na telefon. Unapred hvala!',
-                telefon: '+381 66 30 50 828',
+                telefon: '+381 66 30-50-828',
                 datumVreme: '01/06/2022',
                 dodati_komentari: []
             },
