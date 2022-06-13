@@ -87,9 +87,35 @@ $(document).ready(function () {
         prikaziSlikeIdodajDogadjaje();
     }
 
+    function pretraga() {
+        //alert("test")
+        let ime = $("#myInputSearch").val();
+        if (ime == '') { // prazan unos-prikaz svih macaka
+            macke = [];
+            for (let i = 0; i < zivotinje.length; i++) {
+                if (zivotinje[i].vrsta == 'macka') {
+                    macke.push(zivotinje[i]);
+                    //alert(zivotinje[i].ime)
+                }
+            }
+            prikaziSlikeIdodajDogadjaje();
+            return;
+        }
+
+        for (let i = macke.length - 1; i >= 0; i--) {
+            if(!(macke[i].ime.toLowerCase()).includes(ime)){
+                macke.splice(i,1)
+            }
+        }
+        prikaziSlikeIdodajDogadjaje();
+    }
+
     prikaziSlikeIdodajDogadjaje();
+
     $("input[type = 'radio']").click(sortiraj);
     sortiraj();
+
+    $("#btnPretraga").click(pretraga);
 
     //alert($("vrstaSorta").prop("checked"))
 })

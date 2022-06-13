@@ -54,7 +54,7 @@ $(document).ready(function () {
                             }
                             break;
 
-                            case ("opadajuce"):
+                        case ("opadajuce"):
                             if (psi[i].godine < psi[j].godine) {
                                 pom = psi[i]; psi[i] = psi[j]; psi[j] = pom;
                             }
@@ -74,7 +74,7 @@ $(document).ready(function () {
                             }
                             break;
 
-                            case ("opadajuce"):
+                        case ("opadajuce"):
                             if (psi[i].ime.localeCompare(psi[j].ime) == -1) {
                                 pom = psi[i]; psi[i] = psi[j]; psi[j] = pom;
                             }
@@ -87,9 +87,35 @@ $(document).ready(function () {
         prikaziSlikeIdodajDogadjaje();
     }
 
+    function pretraga() {
+        //alert("test")
+        let ime = $("#myInputSearch").val();
+        if (ime == '') { // prazan unos-prikaz svih pasa
+            psi = [];
+            for (let i = 0; i < zivotinje.length; i++) {
+                if (zivotinje[i].vrsta == 'pas') {
+                    psi.push(zivotinje[i]);
+                    //alert(zivotinje[i].ime)
+                }
+            }
+            prikaziSlikeIdodajDogadjaje();
+            return;
+        }
+
+        for (let i = psi.length - 1; i >= 0; i--) {
+            if(!(psi[i].ime.toLowerCase()).includes(ime)){
+                psi.splice(i,1)
+            }
+        }
+        prikaziSlikeIdodajDogadjaje();
+    }
+
     prikaziSlikeIdodajDogadjaje();
+
     $("input[type = 'radio']").click(sortiraj);
     sortiraj();
+
+    $("#btnPretraga").click(pretraga);
 
     //alert($("vrstaSorta").prop("checked"))
 })
