@@ -40,7 +40,7 @@ $(document).ready(function () {
         let lozinka = $("#lozinkaReg").val();
 
         if (ime == "" || prezime == "" || korisnicko_ime == "" || lozinka == "") {
-            alert("Polja ne smeju biti prazna!")
+         //   alert("Polja ne smeju biti prazna!")
             return;
         }
 
@@ -68,3 +68,28 @@ $(document).ready(function () {
     $("#loginBtn").click(login);
     $("#regBtn").click(registracija);
 });
+
+
+function ucitaj(){ 
+    if(localStorage.getItem("ulogovaniKorisnik")!=null) { 
+        document.getElementsByClassName("loginIliLogout")[0].
+        innerText="Odjavi se";
+        document.getElementsByClassName("loginIliLogout")[0].setAttribute("id", "odjava");
+        document.getElementById("odjava").addEventListener('click', function(){
+           alert("Uspešno ste se odjavili");
+           localStorage.removeItem("ulogovaniKorisnik");
+           document.getElementsByClassName("loginIliLogout")[0].removeAttribute("id");    window.location.href="index.html";
+         
+    })}
+    else{ 
+        document.getElementsByClassName("loginIliLogout")[0].setAttribute("id","logovanje");    
+        document.getElementsByClassName("loginIliLogout")[0].
+        innerText="Uloguj se";
+        document.getElementById("logovanje").addEventListener('click', function(){
+            window.location.href="prijava.html";
+           
+    }) 
+    }
+  
+}
+    

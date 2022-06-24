@@ -11,9 +11,21 @@
     font-size: larger;
 }
 .nagrade img{
-    height: 300px;
+    width: 250px;
+    height: 250px;
 }
 
 .nagrade a{
     color: lightgreen;
 }
+
+.slikaOnama{ 
+    width: 60vh !important;
+    height: 40vh !important;
+}
+
+.telefon{ 
+    width: 40px;
+    height: 40px !important;
+}
+

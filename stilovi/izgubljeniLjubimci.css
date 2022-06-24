@@ -1,1 +1,15 @@
 /**/
+#dodajOvde{
+min-height: 380px;
+background-color: #444941;
+}
+.dugmence{
+    font-size:10pt;
+    color:white;
+}
+
+.dugmePdf{
+    background-color: #444941;
+    color:white;
+    border:none;;
+}

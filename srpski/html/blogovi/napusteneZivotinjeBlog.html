@@ -5,11 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>napusteneZivotinjeBlog.html</title>
+    <title>divljeZivotinjeUZatocenistvuBlog.html</title>
+    <link rel="icon" href="../../../slike/logo2.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+
     <link rel="stylesheet" href="../../../stilovi/index.css">
+    <link rel="stylesheet" href="../../../stilovi/blog.css">
+    <link rel="stylesheet" href="../../../stilovi/napusteneZivotinje.css">
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -20,29 +31,41 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+    <!--Novo-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+    <script src="../../js/napusteneZivotinjeBlog.js"></script>
 </head>
 
-<body>
+<body onload="ucitaj()">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-12" id="heder">
-                <a href="../index.html"><img src="../../../slike/logo.png" id="logo"></a>
-                <h1 id="naslov">Azil Clifford</h1>
-                <div id="jezici">
-                    <a href=""><img src="../../../slike/srpski.png"></a>
-                    <a href=""><img src="../../../slike/engleski.png"></a>
-                </div>
+            <div class="col-sm-11" id="heder">
+                <a href="index.html"><img src="../../../slike/logo.png" id="logo"></a>
+                <h1 id="naslov"><span id="deoNaslov">ClifFord</span> <span id="smaller">Azil</span> </h1>
             </div>
+            <div class="col-sm-1" id="jezici_div">
+                <div id="jezici">
+                    <a href="napusteneZivotinjeBlog.html"><img src="../../../slike/srpski.png" class="jeziciSlike"></a>
+                    <a href="../../../engleski/html/blogovi/napusteneZivotinjeBlog.html"><img src="../../../slike/engleski.png" class="jeziciSlike"></a>
+                </div>
+            </div> <br><br><br><br><br>
         </div>
         <div class="row">
             <div class="col-sm-12" id="meni">
-                <a href="../index.html">Početna</a>
-                <a href="../zivotinje.html">Životinje</a>
-                <a href="../izgubljeniLjubimci.html">Izgubljeni ljubimci</a>
-                <a href="../dodajOglas.html">Dodaj oglas</a>
-                <a href="../mojNalog.html">Moj nalog</a>
-                <a href="../oNama.html">O nama</a>
-                <a href="../prijava.html">Uloguj se</a>
+                <a href="../index.html" class="meni-link levo">Početna</a>
+                <a href="../zivotinje.html" class="meni-link">Životinje</a>
+                <a href="../izgubljeniLjubimci.html" class="meni-link">Izgubljeni ljubimci</a>
+                <a href="../dodajOglas.html" class="meni-link">Dodaj oglas</a>
+                <a href="../mojNalog.html" class="meni-link">Moj nalog</a>
+                <a href="../oNama.html" class="meni-link">O nama</a>
+                <button class="btn btn-light dugme loginIliLogout"></button>
             </div>
         </div>
         <div class="row sredina">
@@ -52,55 +75,112 @@
                 </ul>
                 <br>
             </div>
-            <div class="col-sm-4">
-                <img src="../../../slike/napusten.jpg" width="100%" height="500px">
+            <div class="col-sm-12"><br><br></div>
+            <div class="col-sm-10 offset-1 levo_pozadina2">
+
+                <div class="galerija">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" style="width: 40%;">
+
+                            <div class="item active" id="galerija4" style="margin:auto"> <img style="margin:auto"
+                                    src="../../../slike/napusten.jpg" class: "tales">
+
+                            </div>
+
+                            <div class="item" id="galerija1" style="margin:auto"> <img style="margin:auto"
+                                    src="../../../slike/napustenaZivotinja2.jpg" class: "tales">
+                            </div>
+                            <div class="item" id="galerija2"> <img style="margin:auto"
+                                    src="../../../slike/napustenaZivotinja3.jpg" class: "tales">
+                            </div>
+
+                            <div class="item" id="galerija3" style="margin:auto"> <img style="margin:auto"
+                                    src="../../../slike/napustenaZivotinja4.jpg" class: "tales">
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-8" style="font-size:large">
-                Rešavanje problema napuštenih životinja podrazumeva dugoročan, sistematičan rad na nekoliko nivoa koji
-                podrazumeva sinhronizovano sprovođenje zakonske regulative i edukacije.
+            <div class="col-sm-10 offset-1 oboji">
+                <div style="text-align: justify;
+                text-justify: inter-word; color:#444941; font-size:12pt;">
 
-                Psi i mačke su domestifikovane vrste kojima je mesto uz čoveka i kojima je neophodna njegova zaštita i
-                briga.
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rešavanje problema napuštenih životinja podrazumeva dugoročan,
+                    sistematičan rad na nekoliko nivoa koji
+                    podrazumeva sinhronizovano sprovođenje zakonske regulative i edukacije.
 
-                Nažalost, životinje koje srećemo na ulicama su upravo nekadašnji ljubimci koje je čovek napustio ili
-                njihovi potomci.
+                    Psi i mačke su domestifikovane vrste kojima je mesto uz čoveka i kojima je neophodna njegova zaštita
+                    i
+                    briga.
 
-                Međutim, društvo i građani manju pažnju posvećuju reagovanju na ovakve postupke, dok humano postupanje
-                sa napuštenim životinjama često nailazi na neodobravanje.
+                    Nažalost, životinje koje srećemo na ulicama su upravo nekadašnji ljubimci koje je čovek napustio ili
+                    njihovi potomci.
 
-                Rešavanje problema napuštenih psa i mačaka podrazumeva:
+                    Međutim, društvo i građani manju pažnju posvećuju reagovanju na ovakve postupke, dok humano
+                    postupanje
+                    sa napuštenim životinjama često nailazi na neodobravanje.
+                    <br><br>
+                    Rešavanje problema napuštenih psa i mačaka podrazumeva:
+                    <ul>
+                        <li>Odgovorno vlasništvo ( čipovanje, vakcinacija, dehelmetizacija, sterilizacija)</li>
+                        <li> Podrška prihvatilištima za napuštene životinje</li>
+                        <li> Udomljavanje</li>
+                        <li> CNR ili TNR metod ( "uhvati, steriliši, pusti")</li>
+                    </ul>
+                    Osnovu za efikasno sprovođenje navedenih elemenata čini primena zakona i edukacija građana.
 
-                Odgovorno vlasništvo ( čipovanje, vakcinacija, dehelmetizacija, sterilizacija)
-                Podrška prihvatilištima za napuštene životinje
-                Udomljavanje
-                CNR ili TNR metod ( "uhvati, steriliši, pusti")
-                Osnovu za efikasno sprovođenje navedenih elemenata čini primena zakona i edukacija građana.
+                    Rešenje samog uzroka nastanka problema leži u sankcionisanju neodgovornih vlasnika (napuštanje
+                    životinje
+                    ili njenih potomaka, nekontrolisano razmnožavanje, kretanje životinje bez nadzora).
 
-                Rešenje samog uzroka nastanka problema leži u sankcionisanju neodgovornih vlasnika (napuštanje životinje
-                ili njenih potomaka, nekontrolisano razmnožavanje, kretanje životinje bez nadzora).
+                    Postojanje prihvatilišta omogućuje da se jedan deo životinja privremeno (do udomljavanja) ili trajno
+                    smesti i zbrine, posebno životinje koje su ugrožene na ulici (stare, bolesne, mlade,nesocijalizovane
+                    itd.).
+                    <br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Udomljavanje je najbolji vid zbrinjavanja napuštenih životinja ali
+                    podrazumeva strogu kontrolu
+                    ispunjenosti uslova i podobnosti vlasnika.
 
-                Postojanje prihvatilišta omogućuje da se jedan deo životinja privremeno (do udomljavanja) ili trajno
-                smesti i zbrine, posebno životinje koje su ugrožene na ulici (stare, bolesne, mlade,nesocijalizovane
-                itd.).
+                    Za kvalitetno udomljvanje nije dovoljno da građani imaju želju da udome životinju, oni moraju da se
+                    edukuju o obavezama koje moraju da ispune.
 
-                Udomljavanje je najbolji vid zbrinjavanja napuštenih životinja ali podrazumeva strogu kontrolu
-                ispunjenosti uslova i podobnosti vlasnika.
+                    Na taj način se smanjuje verovatnoća da će udomitelj vratiti životinju kada se pojave problemi ili
+                    ako
+                    se predomisli, da će je zanemariti ili napustiti.
 
-                Za kvalitetno udomljvanje nije dovoljno da građani imaju želju da udome životinju, oni moraju da se
-                edukuju o obavezama koje moraju da ispune.
+                    Međutim, zbog velikog broja napuštenih životinja prelazno rešenje za jedan deo pasa i mačaka je
+                    CNR/TNR
+                    metod koji podrazumeva: hvatanje napuštenih životinja, obeležavanje, vakcinisanje, sterilisanje i
+                    vraćanje na lokaciju sa koje su uzete ( ukoliko nisu bolesne ili agresivne).
 
-                Na taj način se smanjuje verovatnoća da će udomitelj vratiti životinju kada se pojave problemi ili ako
-                se predomisli, da će je zanemariti ili napustiti.
+                    Da bi opstale ove životinje treba da imaju staratelje, što je čest slučaj u praksi.<br><br>
 
-                Međutim, zbog velikog broja napuštenih životinja prelazno rešenje za jedan deo pasa i mačaka je CNR/TNR
-                metod koji podrazumeva: hvatanje napuštenih životinja, obeležavanje, vakcinisanje, sterilisanje i
-                vraćanje na lokaciju sa koje su uzete ( ukoliko nisu bolesne ili agresivne).
-
-                Da bi opstale ove životinje treba da imaju staratelje, što je čest slučaj u praksi.
+                </div>
             </div>
         </div>
+
         <div class="row sredina">
             <div class="col-sm-12 text-center">
+                <br><br> <br><br> <br><br> <br><br>
                 <hr>
             </div>
             <div class="col-sm-12 baner">

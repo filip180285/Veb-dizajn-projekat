@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>macke.html</title>
+    <link rel="icon" href="../../slike/logo2.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -22,30 +23,43 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-        <script src="../js/macke.js"></script>
+    <script src="../js/macke.js"></script>
+
+    <!--Novo-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body>
+<body onload="ucitaj()">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-12" id="heder">
+            <div class="col-sm-11" id="heder">
                 <a href="index.html"><img src="../../slike/logo.png" id="logo"></a>
-                <h1 id="naslov">Azil Clifford</h1>
-                <div id="jezici">
-                    <a href=""><img src="../../slike/srpski.png"></a>
-                    <a href=""><img src="../../slike/engleski.png"></a>
-                </div>
+                <h1 id="naslov"><span id="deoNaslov">ClifFord</span> <span id="smaller">Azil</span> </h1>
             </div>
+            <div class="col-sm-1" id="jezici_div">
+                <div id="jezici">
+                    <a href="macke.html"><img src="../../slike/srpski.png" class="jeziciSlike"></a>
+                    <a href="../../engleski/html/macke.html"><img src="../../slike/engleski.png" class="jeziciSlike"></a>
+                </div>
+            </div> <br><br><br><br><br>
         </div>
         <div class="row">
             <div class="col-sm-12" id="meni">
-                <a href="index.html">Početna</a>
-                <a href="zivotinje.html">Životinje</a>
-                <a href="izgubljeniLjubimci.html">Izgubljeni ljubimci</a>
-                <a href="dodajOglas.html">Dodaj oglas</a>
-                <a href="mojNalog.html">Moj nalog</a>
-                <a href="oNama.html">O nama</a>
-                <a href="prijava.html">Uloguj se</a>
+                <a href="index.html" class="meni-link levo">Početna</a>
+                <a href="zivotinje.html" class="meni-link">Životinje</a>
+                <a href="izgubljeniLjubimci.html" class="meni-link">Izgubljeni ljubimci</a>
+                <a href="dodajOglas.html" class="meni-link">Dodaj oglas</a>
+                <a href="mojNalog.html" class="meni-link">Moj nalog</a>
+                <a href="oNama.html" class="meni-link">O nama</a>
+                <button class="btn btn-light dugme loginIliLogout"></button>
             </div>
         </div>
         <div class="row sredina">
@@ -55,11 +69,23 @@
                 </ul>
                 <br>
             </div>
-            <div class="col-sm-12" id="sort">
+            <div class="col-lg-4 offset-1 " id="sort">
                 <input type="text" id="myInputSearch" class="searchBox" placeholder="Pretraga po imenu...">
                 <button id="btnPretraga" class="btn btn-primary">Pretraga</button>
             </div>
-            <div class="col-sm-12" id="sort">
+            <div class="col-lg-1 offset-1  col-sm-3">
+                <div class="input-counter ">
+                    <span class="minus-btn"><i class="bx bx-minus"></i></span>
+                    <input type="text" id="brojGodinaZivotinje" value="1" min="1">
+                    <span class="plus-btn"><i class="bx bx-plus"></i></span>
+                </div>
+            </div>
+            <div class="col-lg-1  col-sm-3 dugmeZaGodine">
+
+                <button id="btnPretragaGodine" class="btn btn-primary">Pretraga</button>
+
+            </div>
+            <div class="col-sm-12 col-lg-6 offset-1" id="sort">
                 <input type="radio" name="vrstaSorta" id="godine" checked> Godine
                 <input type="radio" name="vrstaSorta" id="naziv"> Naziv
                 |||
@@ -69,7 +95,7 @@
         </div>
         <div class="row sredina">
             <div class="col-sm-12 text-center">
-                <div id = "macke">
+                <div id="macke">
 
                 </div>
             </div>
@@ -89,7 +115,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12 footer text-center">
-                Copyright 2022, Teodora Perić,Filip Kojić, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta
+                Copyright 2022, Teodora Perić, Filip Kojić, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta
                 Univerziteta u Beogradu
             </div>
         </div>

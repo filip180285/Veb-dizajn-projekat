@@ -1,37 +1,28 @@
 #pasMeni{
-    background-image: url("../slike/pasMeni.jfif");
+    background-image: url("../slike/pasVrsta.png");
     background-size: 100% 100%;
-    width: 30%;
-    height: 500px;
+    width: 40%;
+    height:150px;
+    margin:auto;
+    margin-top: 45px;;
 }
 
 #mackaMeni{
-    background-image: url("../slike/mackaMeni.jpg");
+    background-image: url("../slike/mackaVrsta.png");
     background-size: 100% 100%;
-    width: 30%;
-    height: 500px;
+    width: 50%;
+    height:150px;
+    margin:auto;
+    margin-top: 45px;;
 }
 
 #pticaMeni{
-    background-image: url("../slike/pticaMeni.jpg");
+    background-image: url("../slike/pticaVrsta.png");
     background-size: 100% 100%;
-    width: 30%;
-    height: 500px;
-}
-
-#pasMeni:hover{
-    border: 5px dashed red;
-    cursor: pointer;
-}
-
-#mackaMeni:hover{
-    border: 5px dashed red;
-    cursor: pointer;
-}
-
-#pticaMeni:hover{
-    border: 5px dashed red;
-    cursor: pointer;
+    width: 50%;
+    height:150px;
+    margin:auto;
+    margin-top: 45px;;
 }
 
 .meni{
@@ -41,3 +32,54 @@
     margin-bottom: 20px;
 }
 
+/*Novo*/
+.okvirSlika2{ 
+    font-weight: 500;
+    width: 70%;
+    height: 300px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.ispodSlikePas{
+    margin-left:30%;
+    color:#444941;
+    font-size: 30pt;
+}
+
+.ispodSlikeMacka{
+    margin-left:18%;
+    color:#444941;
+    font-size: 30pt;
+}
+
+
+.okvirSlika2:hover{
+    
+    border: 5px solid orangered;
+    cursor: pointer;
+}
+#pasMeni:hover{
+    background-image: url("../slike/pasVrsta2.png");
+    background-size: 100% 100%;
+    width: 40%;
+    height:150px;
+    margin:auto;
+    margin-top: 45px;;
+}
+#mackaMeni:hover{
+    background-image: url("../slike/mackaVrsta2.png");
+    background-size: 100% 100%;
+    width: 50%;
+    height:150px;
+    margin:auto;
+    margin-top: 45px;;
+}
+#pticaMeni:hover{
+    background-image: url("../slike/pticaVrsta2.png");
+    background-size: 100% 100%;
+    width: 50%;
+    height:150px;
+    margin:auto;
+    margin-top: 45px;;
+}

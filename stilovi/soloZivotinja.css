@@ -1,8 +1,97 @@
 #slikaZivotinje img{
-    width: 100%;
-    height: 500px;
+    width: 70%;
+    height: 300px;
+    border-radius: 10px;;
 }
 
 #opisZivotinje{
     font-size: x-large;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#smaller{
+  font-size:30pt;
+  margin-left:4px;
+}
+
+.levo_pozadina{
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(to right,#5F7A61,#D5EEBB);
+    padding: 30px 25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    font-size: 5vh;
+    font-weight: 500;
+    margin-left: 5%;
+    color: #fff;
+}
+
+  
+.info{
+    margin-top: 20px;;
+    margin-bottom: 25px;
+  }
+  
+.info h3{
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #e0e0e0;
+      color: #353c4e;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    
+    font-size: 16pt !important;
+  }
+  
+ .info_data{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.info_data .data{
+    width: 45%;
+  }
+  
+.info_data .data h4{
+      color: #353c4e;
+      margin-bottom: 5px;
+      font-size: 12pt !important;
+  }
+  
+.info_data .data p{
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #919aa3;
+  }
+  
+  .videoH4{ 
+      color: #353c4e;
+      margin-bottom: 5px;
+      font-size: 12pt !important;
+  }
+  .data1{ 
+    margin-left:10px;
+  }
+  #video{ 
+    background-color: #444941;
+  }
+  #logoZivotinje img{ 
+    width: 30% !important;
+  }
+ 
+  .slikeGalerije img{ 
+    width: 30%!important;
+  }
+
+  .galerija{
+  width:60% !important;
+  margin: auto;
+}
+
+.spusti{
+  margin-top: 10px;;
 }

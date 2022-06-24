@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+    <link rel="icon" href="../../slike/logo2.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../../stilovi/index.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/index.js"></script>
+
+    <!--Novo-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+</head>
+
+<body onload="ucitaj()">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-11" id="heder">
+                <a href="index.html"><img src="../../slike/logo.png" id="logo"></a>
+                <h1 id="naslov"><span id="deoNaslov">ClifFord</span> <span id="smaller">Asylum </span> </h1>
+            </div>
+            <div class="col-sm-1" id="jezici_div">
+                <div id="jezici">
+                    <a href="../../srpski/html/index.html"><img src="../../slike/srpski.png" class="jeziciSlike"></a>
+                    <a href="index.html"><img src="../../slike/engleski.png" class="jeziciSlike"></a>
+                </div>
+            </div>
+            <br><br><br><br><br>
+        </div>
+        <div class="row">
+            <div class="col-sm-12" id="meni">
+                <a href="index.html" class="meni-link levo">Home</a>
+                <a href="zivotinje.html" class="meni-link">Pets  </a>
+                <a href="izgubljeniLjubimci.html" class="meni-link">Disappeared pets</a>
+                <a href="dodajOglas.html" class="meni-link">Add announcement</a>
+                <a href="mojNalog.html" class="meni-link">My profile</a>
+                <a href="oNama.html" class="meni-link">About us</a>
+                <button class="btn btn-light dugme loginIliLogout" ></button>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="row sredina">
+            <div class="col-sm-12">
+                <ul class="breadcrumb">
+                    <li>/Početna</li>
+                </ul>
+            </div>
+            <div class="col-sm-12 text-center"> 
+                <hr>
+                <h2>Nove životinje</h2>
+                <hr>
+                <br> 
+            </div>
+            <div class="col-sm-4 novo text-center ptr ">
+                <div class="okvirSlika rounded-circle">
+                <img src="../../slike/pas1.jpg"  id="1"  class="slikaNoveZivotinje rounded-circle">
+                <br> <img src="../../slike/pas_logo.png" class="logo_zaSlike">
+                Mile
+            </div>
+            </div>
+            <div class="col-sm-4 novo text-center ptr">
+                <div class="okvirSlika rounded-circle">
+                <img src="../../slike/macka1.jpg"  id="4"  class="slikaNoveZivotinje rounded-circle">
+                <br> <img src="../../slike/macka_logo.png" class="logo_zaSlike">
+                Lea
+            </div>
+            </div>
+            <div class="col-sm-4 novo text-center ptr">
+                <div class="okvirSlika rounded-circle">
+                <img src="../../slike/ptica1.jpg"  id="7" class="slikaNoveZivotinje rounded-circle">
+                <br> <img src="../../slike/dove.png" class="logo_zaSlike">
+                Pera
+            </div>
+            </div>
+           
+            <div class="col-sm-12 text-center">
+                <br><br> <br>
+                <hr>
+                <h2>Izdvajamo od blogova</h2>
+                <hr>
+                <br>
+            </div>
+            <div class="col-sm-3 blog text-center spusti">
+                <div class="card" style="width:100% ; margin-top: 10px">
+                    <img class="card-imgtop" src="../../slike/napusten.jpg">
+                    <div class="card-body">
+                        <h4 class="cardtitle">Napuštene životinje</h4>
+                        <p class="cardtext">Rešavanje problema napuštenih životinja podrazumeva dugoročan, sistematičan
+                            rad na nekoliko nivoa koji podrazumeva sinhronizovano sprovođenje zakonske regulative i
+                            edukacije...
+                        </p>
+                        <a href="blogovi/napusteneZivotinjeBlog.html" class="btn dugmence">Idi na blog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 blog text-center spusti">
+                <div class="card" style="width:100%; margin-top: 10px">
+                    <img class="card-imgtop" src="../../slike/zarobljen.jpg">
+                    <div class="card-body">
+                        <h4 class="cardtitle">Divlje životinje u zatočeništvu</h4>
+                        <p class="cardtext">Divlje životinje se drže u zatočeništvu u zoo vrtovima, cirkusima,
+                            akvarijumima i delfinarijumima ali i kao kućni ljubimci.Dobrobit ovih životinja...
+                        </p>
+                        <a href="blogovi/divljeZivotinjeUZatocenistvuBlog.html" class="btn dugmence">Idi na blog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 blog text-center spusti">
+                <div class="card" style="width:100%; margin-top: 10px;">
+                    <img class="card-imgtop" src="../../slike/farma.jpg">
+                    <div class="card-body">
+                        <h4 class="cardtitle">Farmske životinje</h4>
+                        <p class="cardtext">Kada govorimo o farmskim životinjama mislimo na životinje koje ljudi
+                            eksploatišu na:
+                            Farmama na kojima se drže domaće životinje radi dobijanja mesa, mleka, jaja i drugih
+                            proizvoda životinjskog porekla...</p>
+                        <a href="blogovi/farmskeZivotinjeBlog.html" class="btn dugmence ">Idi na blog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 blog text-center spusti">
+                <div class="card" style="width:100% ;margin-top: 10px">
+                    <img class="card-imgtop" src="../../slike/mis.jpg">
+                    <div class="card-body">
+                        <h4 class="cardtitle">Ogledne životinje</h4>
+                        <p class="cardtext">Korišćenje životinja u tzv. naučne i edukativne svrhe je posebno
+                            problematična oblast jer predstavlja polje još uvek aktuelne diskusije i podeljenih
+                            mišljenja kako među laicima tako...</p>
+                        <a href="blogovi/ogledneZivotinjeBlog.html" class="btn dugmence">Idi na blog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 text-center">
+                <br><br> <br>
+                <hr>
+                <h2>Najnoviji oglasi</h2>
+                <hr>
+                <br>
+            </div>
+            <div class="col-sm-4 text-center oglas">
+                <h4 id="naslov1"></h4>
+                <p id="opis1">
+                    <p id="datum1">
+                    </p>
+                 <p id="telefon1"></p>
+            </div>
+            <div class="col-sm-4 text-center oglas">
+                <h4 id="naslov2"></h4>
+                <p id="opis2"></p>
+                <p id="datum2">
+                </p>
+                <p id="telefon2"></p>
+            </div>
+            <div class="col-sm-4 text-center oglas">
+                <h4 id="naslov3"></h4>
+                <p id="opis3">
+                    <p id="datum3">
+                    </p>
+                <p id="telefon3"></p>
+            </div>
+            <div class="col-sm-12 text-center">
+                <br><br> <br>
+                <hr>
+            </div>
+        </div>
+        <div class="row sredina">
+            
+            <div class="col-sm-12 baner">
+                <a href="https://zoovita.rs/" target=”_blank”>zoovita.rs</a>
+                <a href="https://www.animalhope.org.rs/" target=”_blank”>animalhope.org.rs</a>
+                <a href="https://orca.rs/udruzenje-za-zastitu-zivotinja-spasa/" target=”_blank”>orca.rs</a>
+            </div>
+            <div class="col-sm-12 text-center">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 footer text-center">
+                Copyright 2022, Teodora Perić, Filip Kojić, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta
+                Univerziteta u Beogradu
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

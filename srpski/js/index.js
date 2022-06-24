@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     //alert("test")
     let korisnici = [];
     let zivotinje = [];
@@ -142,7 +143,7 @@ $(document).ready(function () {
                 korisnik:'filip',
                 naziv_zivotinje: 'Mina',
                 opis: 'Mina, ženka Šar-planinca stara 7 meseci nestala je 10.05.2022. na Avali, Put za Markoviće, Beograd. Ima braon kožnu ogrlicu. Umiljata je i druželjubiva. Nalazaču sledi nagrada.',
-                telefon: '+381 66 20-50-929',
+                telefon: '+381 66 2050929',
                 datumVreme: '10/01/2022',
                 dodati_komentari: []
             },
@@ -151,7 +152,7 @@ $(document).ready(function () {
                 korisnik:'teodora',
                 naziv_zivotinje: 'Mici',
                 opis: 'Nestala maca u Subotickoj ulici na Telepu. Odaziva se na ime: Mici. Cipovana je. Ako je neko vidi molim vas da je zadrzite i da mi se javite na ovaj broj Pronalazacu sledi nagrada.',
-                telefon: '+381 66 25-30-151',
+                telefon: '+381 66 2050929',
                 datumVreme: '17/05/2022',
                 dodati_komentari: []
             },
@@ -160,7 +161,7 @@ $(document).ready(function () {
                 korisnik:'teodora',
                 naziv_zivotinje: 'Bata',
                 opis: 'Mačak uzrasta od godinu dana, nestao je pre oko 3 nedelje bez traga. Odaziva se na ime Bata. Krupan je, ima dugu dlaku, zelene zrikave oči, braon-bele boje. Na teritoriji Beograda, blizu opštine Mladenovac. Ako ga neko vidi molim Vas neka me kontaktira na telefon. Unapred hvala!',
-                telefon: '+381 66 30-50-828',
+                telefon:  '+381 66 2050929',
                 datumVreme: '01/06/2022',
                 dodati_komentari: []
             },
@@ -178,7 +179,9 @@ $(document).ready(function () {
         for (let i = 0; i < najnoviji.length; i++) {
             $("#naslov" + (i + 1)).text(najnoviji[i].naziv_zivotinje);
             $("#opis" + (i + 1)).text(najnoviji[i].opis);
-            $("#telefon" + (i + 1)).text(najnoviji[i].telefon);
+            $("#datum" + (i + 1)).text("Datum: "+najnoviji[i].datumVreme);
+            $("#telefon" + (i + 1)).attr("style","background-color:#7FC8A9; width:60%; margin:auto; border-radius:10px;")
+            $("#telefon" + (i + 1)).text("Kontakt telefon:"+najnoviji[i].telefon);
         }
     }
 
@@ -199,4 +202,33 @@ $(document).ready(function () {
         localStorage.setItem("soloZivotinja", 7);
         window.location.href = "soloZivotinja.html";
     });
+
+   
+
 });
+
+function ucitaj(){ 
+        if(localStorage.getItem("ulogovaniKorisnik")!=null) { 
+            document.getElementsByClassName("loginIliLogout")[0].
+            innerText="Odjavi se";
+            document.getElementsByClassName("loginIliLogout")[0].setAttribute("id", "odjava");
+            document.getElementById("odjava").addEventListener('click', function(){
+               alert("Uspešno ste se odjavili");
+              //  localStorage.clear("ulogovaniKorisnik");
+              localStorage.removeItem("ulogovaniKorisnik");
+                document.getElementsByClassName("loginIliLogout")[0].removeAttribute("id");  
+                window.location.href="index.html";
+             
+        })}
+        else{ 
+            document.getElementsByClassName("loginIliLogout")[0].setAttribute("id","logovanje");    
+            document.getElementsByClassName("loginIliLogout")[0].
+            innerText="Uloguj se";
+            document.getElementById("logovanje").addEventListener('click', function(){
+                window.location.href="prijava.html";
+               
+        }) 
+        }
+      
+    }
+        

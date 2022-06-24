@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soloZivotinja.html</title>
+    <link rel="icon" href="../../slike/logo2.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="../../stilovi/index.css">
+    <link rel="stylesheet" href="../../stilovi/soloZivotinja.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/soloZivotinja.js"></script>
+
+    <!--Novo-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body onload="ucitaj()">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-11" id="heder">
+                <a href="index.html"><img src="../../slike/logo.png" id="logo"></a>
+                <h1 id="naslov"><span id="deoNaslov">ClifFord</span> <span id="smaller">Azil</span> </h1>
+                <br><br>
+            </div>
+            <div class="col-sm-1" id="jezici_div">
+                <div id="jezici">
+                    <a href="../../srpski/html/soloZivotinja.html"><img src="../../slike/srpski.png" class="jeziciSlike"></a>
+                    <a href="soloZivotinja.html"><img src="../../slike/engleski.png" class="jeziciSlike"></a>
+                </div>
+            </div>
+            <br><br><br><br><br>
+        </div>
+        <div class="row">
+            <div class="col-sm-12" id="meni">
+                <a href="index.html" class="meni-link levo">Početna</a>
+                <a href="zivotinje.html" class="meni-link">Životinje</a>
+                <a href="izgubljeniLjubimci.html" class="meni-link">Izgubljeni ljubimci</a>
+                <a href="dodajOglas.html" class="meni-link">Dodaj oglas</a>
+                <a href="mojNalog.html" class="meni-link">Moj nalog</a>
+                <a href="oNama.html" class="meni-link">O nama</a>
+                <button class="btn btn-light dugme loginIliLogout"></button>
+            </div>
+        </div>
+        <div class="row sredina">
+            <div class="col-sm-12">
+                <ul class="breadcrumb" style="padding: 0px;margin: 0px; padding-top: 10px;">
+                    <li id="nazivStranice"></li>
+                </ul>
+                <br>
+            </div>
+        </div>
+        <div class="row sredina">
+            <div class="col-sm-4  levo_pozadina">
+
+
+                <div class="galerija">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+
+                            <div class="item active" id="galerija4">
+                            </div>
+
+                            <div class="item" id="galerija1">
+                            </div>
+                            <div class="item" id="galerija2">
+                            </div>
+
+                            <div class="item" id="galerija3">
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-7  desno-pozadina" id="opisZivotinje">
+                <div class="info">
+                    <h3>&nbsp;&nbsp;Informacije</h3>
+                    <div class="info_data">
+                        <div class="data">
+                            &nbsp;&nbsp;&nbsp;<span id="logoZivotinje" align="bottom"></span>
+                            <span id="ime"></span>
+                            <p></p>
+                        </div>
+                        <div class="data spusti">
+                            <h4>&nbsp;&nbsp;Godine:&nbsp;&nbsp;&nbsp;<span id="godine"></span></h4>
+                            <p></p>
+                        </div>
+                        <div class="data spusti">
+                            <h4>Težina:&nbsp;&nbsp;&nbsp;<span id="tezina"></span> </h4>
+                            <p></p>
+                        </div>
+                        <div class="data spusti">
+                            <h4>Opis:</h4>
+                            <p><span id="opis"></span></p>
+                        </div>
+                    </div>
+                    <div class="data1">
+                        <h4 class="videoH4">Video:</h4>
+                        <video width="400" height="200px" id="video" controls>
+                        </video>
+                    </div>
+
+
+                </div>
+                <br>
+
+
+            </div>
+            <div class="col-sm-12 text-center">
+                <br>
+                <hr>
+            </div>
+            <div class="col-sm-12 baner">
+                <a href="https://zoovita.rs/" target=”_blank”>zoovita.rs</a>
+                <a href="https://www.animalhope.org.rs/" target=”_blank”>animalhope.org.rs</a>
+                <a href="https://orca.rs/udruzenje-za-zastitu-zivotinja-spasa/" target=”_blank”>orca.rs</a>
+            </div>
+            <div class="col-sm-12 text-center">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 footer text-center">
+                Copyright 2022, Teodora Perić, Filip Kojić, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta
+                Univerziteta u Beogradu
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

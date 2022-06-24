@@ -1,63 +1,91 @@
+
 #heder {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    background-color: #B1C1C0;
+    background: linear-gradient(to right,white,#D5EEBB);
 }
 
 #logo {
-    width: 150px;
+    width: 130px;
     height: 70px;
-    padding-top: 5px;
+    margin-top: 30px;
 }
 
 #naslov {
-    color: orangered;
-    font-weight: bold;
-    font-style: italic;
+    color: #5F7161;
+    font-family: 'Satisfy', cursive;
+    padding-top: 30px;
+}
+
+#deoNaslov{ 
+    color: #5F7161;
+    font-size: 42pt;
+    font-family: 'DM Serif Display', serif;
     padding-top: 20px;
 }
 
-.orangered {
-    color: orangered;
+#jezici_div {
+    background-color: #D5EEBB;
 }
 
 #jezici {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    margin-top: 60px;
 }
 
+.jeziciSlike{
+    width:40px;
+}
+
+
 .ptr {
+    margin-top: 10px;;
     cursor: pointer;
 }
 
-#jezici img {
-    width: 50px;
-    height: 25px;
-}
-
 #meni {
-    background-color: #B1C1C0;
+    background: linear-gradient(to right,white,#D5EEBB) !important;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
     height: 50px;
     font-size: x-large;
+    font-size:1.3vw;
+}
+
+.levo{ margin-left: 20%; 
 }
 
 #meni a {
-    color: white;
+    color: #5F7A61;
     text-decoration: none;
 }
 
 #meni a:hover {
     color: orangered;
+    font-weight: 500;
+}
+
+.meni-link{
+    padding-left: 3%;
+}
+
+.dugme{ 
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 1.3vw;
+    background-color: white ;
+    border: solid 2px #5F7A61;
+    color:#5F7A61 !important;
+    margin-left: 15%;
+}
+
+.dugme:hover{ 
+    background-color:#5F7A61;
+    color:white !important;
 }
 
 .sredina {
-    background-color: grey;
+    background-color: #444941;
     color: white;
 }
 
@@ -69,22 +97,26 @@ ul.breadcrumb {
 }
 
 hr {
-    height: 2px;
+   
     background-color: white;
-    border: none;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #444941, rgba(0, 0, 0, 0));
 }
 
 .novo {
-    font-size: 40px;
+    color: #444941;
+    font-size: 36px;
 }
 
 .novo img {
-    width: 100%;
-    height: 500px;
+    width:90%;
+    height: 280px;
+    border-radius: 10px;
 }
 
 .novo img:hover {
-    border: 10px solid orangered;
+    border: 5px solid orangered;
 }
 
 .blog {
@@ -117,8 +149,34 @@ hr {
 
 
 .footer {
-    background-color: #B1C1C0;
+    background-color: #D5EEBB;
     font-style: italic;
-    font-weight: bold;
-    font-size: large;
+    font-size:12pt !important;
+}
+
+/*Novo*/
+.slikaNoveZivotinje{ 
+    margin-top: 15px;;
+}
+.okvirSlika{ 
+    font-weight: 500;
+    margin-left: 60px;;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.logo_zaSlike{
+    margin-left: -40px;
+    width: 40px !important;
+    height: 40px!important;
+}
+
+.logo_zaSlike:hover {
+  border: none !important;
+}
+
+.dugmence{
+    background-color: #7FC8A9;;
 }
