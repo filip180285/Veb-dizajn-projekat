@@ -3,10 +3,10 @@ function ucitaj() {
    var putanja=JSON.parse(localStorage.getItem("pregledKomentaraPutanja"));
 
    if(putanja==0){ 
-    document.getElementById("ubaciOvde").innerText="/Izgubljeni ljubimci/Pregled komentara";
+    document.getElementById("ubaciOvde").innerText="/Missing pets/See all comments";
    }
    else{ 
-    document.getElementById("ubaciOvde").innerText="/Moj nalog/Pregled komentara";
+    document.getElementById("ubaciOvde").innerText="/My profile/See all comments";
    }
     if (localStorage.getItem("ulogovaniKorisnik") != null) {
         document.getElementsByClassName("loginIliLogout")[0].
@@ -16,7 +16,7 @@ function ucitaj() {
 
 
         document.getElementById("odjava").addEventListener('click', function () {
-            alert("Uspešno ste se odjavili");
+            alert("Logout successfull");
             localStorage.removeItem("ulogovaniKorisnik");
             document.getElementsByClassName("loginIliLogout")[0].removeAttribute("id");  
             window.location.href = "index.html";
@@ -37,7 +37,7 @@ function ucitaj() {
     elem=JSON.parse(localStorage.getItem("pregledajuSe"));
     if(elem.dodati_komentari.length==0){ 
         document.getElementById("dodajOvde").innerHTML+=
-        '<div class="col-lg-12 col-sm-12  text-center" style=" maring-top:30px; font-size:24pt; "><div style=" margin:auto;">Oglas trenutno nema nijedan komentar!</div>'+
+        '<div class="col-lg-12 col-sm-12  text-center" style=" maring-top:30px; font-size:24pt; "><div style=" margin:auto;">No comments found!</div>'+
         '</div>';
   return;
     }

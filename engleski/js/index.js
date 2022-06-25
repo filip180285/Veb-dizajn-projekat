@@ -179,9 +179,9 @@ $(document).ready(function () {
         for (let i = 0; i < najnoviji.length; i++) {
             $("#naslov" + (i + 1)).text(najnoviji[i].naziv_zivotinje);
             $("#opis" + (i + 1)).text(najnoviji[i].opis);
-            $("#datum" + (i + 1)).text("Datum: "+najnoviji[i].datumVreme);
+            $("#datum" + (i + 1)).text("Date: "+najnoviji[i].datumVreme);
             $("#telefon" + (i + 1)).attr("style","background-color:#7FC8A9; width:60%; margin:auto; border-radius:10px;")
-            $("#telefon" + (i + 1)).text("Kontakt telefon:"+najnoviji[i].telefon);
+            $("#telefon" + (i + 1)).text("Contact number:"+najnoviji[i].telefon);
         }
     }
 
@@ -213,7 +213,7 @@ function ucitaj(){
             innerText="Logout";
             document.getElementsByClassName("loginIliLogout")[0].setAttribute("id", "odjava");
             document.getElementById("odjava").addEventListener('click', function(){
-               alert("Uspešno ste se odjavili");
+                alert("Logout successfull");
               //  localStorage.clear("ulogovaniKorisnik");
               localStorage.removeItem("ulogovaniKorisnik");
                 document.getElementsByClassName("loginIliLogout")[0].removeAttribute("id");  

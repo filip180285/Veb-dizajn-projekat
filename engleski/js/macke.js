@@ -14,7 +14,7 @@ $(document).ready(function () {
     function prikaziSlikeIdodajDogadjaje() {
         $("#macke").empty();
         if (macke.length == 0) {
-            let nemaRezultata = $("<hr style='width: 83%;'> <p style='font-size:20pt; margin:auto; height:345px; font-style:normal;'>  <br> Nema rezultata za datu pretragu</p>");
+            let nemaRezultata = $("<hr style='width: 83%;'> <p style='font-size:20pt; margin:auto; height:345px; font-style:normal;'>  <br>No results</p>");
             $("#macke").append(nemaRezultata);
         }
         for (let i = 0; i < macke.length; i++) {
@@ -202,7 +202,7 @@ function ucitaj(){
         innerText="Logout";
         document.getElementsByClassName("loginIliLogout")[0].setAttribute("id", "odjava");
         document.getElementById("odjava").addEventListener('click', function(){
-           alert("Uspešno ste se odjavili");
+            alert("Logout successfull");
            localStorage.removeItem("ulogovaniKorisnik");
            document.getElementsByClassName("loginIliLogout")[0].removeAttribute("id");    window.location.href="index.html";
          

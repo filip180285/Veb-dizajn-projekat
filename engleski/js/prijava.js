@@ -8,7 +8,7 @@ $(document).ready(function () {
         let lozinka = $("#lozinka").val();
 
         if (korisnicko_ime == "" || lozinka == "") {
-            alert("Polja ne smeju biti prazna!")
+            alert("You must fill all inputs!")
             return;
         }
 
@@ -24,11 +24,11 @@ $(document).ready(function () {
         }
 
         if (!postoji) {
-            alert("Neispravni kredencijali!")
+            alert("Invalid credentials!")
             return;
         }
 
-        alert("Uspešna prijava!")
+        alert("Login successfull!")
         localStorage.setItem("ulogovaniKorisnik", korisnicko_ime)
         window.location.href = "index.html";
     }
@@ -46,7 +46,7 @@ $(document).ready(function () {
 
         for(let i = 0; i < korisnici.length; i++){
             if(korisnici[i].korisnicko_ime == korisnicko_ime){
-                alert("Korisničko ime je zauzeto");
+                alert("Username is already taken!");
                 return;
             }
         }
@@ -62,7 +62,7 @@ $(document).ready(function () {
         korisnici.push(noviKorisnik);
         localStorage.setItem("korisnici", JSON.stringify(korisnici))
 
-        alert("Uspešna registracija!")
+        alert("Registered successfully!")
     }
 
     $("#loginBtn").click(login);
@@ -76,7 +76,7 @@ function ucitaj(){
         innerText="Logout";
         document.getElementsByClassName("loginIliLogout")[0].setAttribute("id", "odjava");
         document.getElementById("odjava").addEventListener('click', function(){
-           alert("Uspešno ste se odjavili");
+           alert("Logout successfull");
            localStorage.removeItem("ulogovaniKorisnik");
            document.getElementsByClassName("loginIliLogout")[0].removeAttribute("id");    window.location.href="index.html";
          

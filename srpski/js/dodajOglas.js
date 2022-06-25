@@ -15,7 +15,7 @@ function ucitaj() {
             " <input type='text' id='nazivZivotinje' placeholder='Naziv životinje...' >" +
             "</div>" +
             "<div class='forma-field'>" +
-            " <input type='text' id='brojTelefona' placeholder='+381...'  >" +
+            " <input type='text' id='brojTelefona' placeholder='+381xxxxxxxx(x)'  >" +
             "</div>" +
             "<div class='forma-field'>" +
             " <textarea id='opisZivotinje' rows='4' cols='50' placeholder='Opis životinje...'></textarea>" +

@@ -10,19 +10,19 @@ function ucitaj() {
 
         document.getElementById("dodajOglasForma").setAttribute("style", "height:396px;  margin:auto; font-size:16pt;");
         document.getElementById("dodajOglasForma").innerHTML = "<div id='formaZaOglas'>" +
-            "<div class='forma1'><h2 style='margin-left:30%; line-spacing:3px;'>Ostavi komentar</h2> <br><br>" +
+            "<div class='forma1'><h2 style='margin-left:30%; line-spacing:3px;'>Leave a comment</h2> <br><br>" +
             "<div class='forma-field'>" +
-            " <textarea id='komentarZivotinja' rows='8' cols='100' placeholder='Komentar...'></textarea>" +
+            " <textarea id='komentarZivotinja' rows='8' cols='100' placeholder='Comment...'></textarea>" +
             "</div>" +
             "<div class='forma-field'> " +
-            "<button id='predajKomentar'  onclick=predaj() class='btn btn-secondary'>Predaj komentar</button>" +
+            "<button id='predajKomentar'  onclick=predaj() class='btn btn-secondary'>Submit</button>" +
             "</div> <br><br>" +
             "</div>" +
             "</div>";
 
 
         document.getElementById("odjava").addEventListener('click', function () {
-            alert("Uspešno ste se odjavili");
+            alert("Logout successfull");
             localStorage.removeItem("ulogovaniKorisnik");
             document.getElementsByClassName("loginIliLogout")[0].removeAttribute("id");  
             window.location.href = "index.html";
@@ -34,9 +34,9 @@ function ucitaj() {
         document.getElementsByClassName("loginIliLogout")[0].
         innerText="Login";
         document.getElementById("dodajOglasForma").setAttribute("style", "height:396px;  margin-left:10%; font-size:16pt;");
-        document.getElementById("dodajOglasForma").innerHTML = "<br><br>&nbsp;  &nbsp;Žao nam je, da biste dodali komentar morate se ulogovati &#8594;        ";
-        document.getElementById("dodajOglasForma").innerHTML += "<a href='prijava.html' style='text-decoration:none; color:#7FC8A9;'>Uloguj se</a>"
-        document.getElementById("dodajOglasForma").innerHTML += "<br>&nbsp;  &nbsp;Ukoliko niste kreirali nalog, to možete učiniti preko sledećeg linka &#8594; <a href='prijava.html' style='text-decoration:none; color:#7FC8A9;'>Registruj se</a> &nbsp;  &nbsp;"
+        document.getElementById("dodajOglasForma").innerHTML = "<br><br>&nbsp;  &nbsp;You must be logged in in order to leave a comment &#8594;        ";
+        document.getElementById("dodajOglasForma").innerHTML += "<a href='prijava.html' style='text-decoration:none; color:#7FC8A9;'>Login</a>"
+        document.getElementById("dodajOglasForma").innerHTML += "<br>&nbsp;  &nbsp;If you have not created an account, you can do so via the following link &#8594; <a href='prijava.html' style='text-decoration:none; color:#7FC8A9;'>Register</a> &nbsp;  &nbsp;"
 
         document.getElementById("logovanje").addEventListener('click', function () {
             window.location.href = "prijava.html";
@@ -50,12 +50,12 @@ function predaj(){
     let komentar1= document.getElementById("komentarZivotinja").value;
    
     if (komentar1 == "" ) {
-        alert("Polje ne sme biti prazno!")
+        alert("Field must be filled!")
         return;
     }
 
     if(localStorage.getItem("komentariseSe")==null){ 
-        alert("Nasilno ulaženje");
+        alert("You must be logged in!");
         return;
     }
     var today = new Date();
@@ -80,7 +80,7 @@ function predaj(){
         }
     }
     localStorage.setItem("oglasi", JSON.stringify(oglasi));
-    alert("Uspešno ostavljen komentar!")
+    alert("Comment added successfully!")
     window.location.href = "izgubljeniLjubimci.html";
 }
 

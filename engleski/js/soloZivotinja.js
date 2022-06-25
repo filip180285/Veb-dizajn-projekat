@@ -14,19 +14,19 @@ $(document).ready(function () {
     switch (vrsta) {
         case ("pas"):{
             putanjaDoLogoa="../../slike/pas_logo.png";
-            vrsta = "Psi";
+            vrsta = "Dogs";
             break;}
         case ("macka"):
             { putanjaDoLogoa="../../slike/macka_logo.png";
-            vrsta = "Macke";
+            vrsta = "Cats";
             break;}
         case ("ptica"):{
             putanjaDoLogoa="../../slike/dove.png";
-            vrsta = "Ptice";
+            vrsta = "Birds";
             break;}
     }
 
-    $("#nazivStranice").text("/Životinje" + "/" + vrsta + "/" + zivotinja.ime);
+    $("#nazivStranice").text("/Pets" + "/" + vrsta + "/" + zivotinja.ime);
    
     
     let putanjaDoSlike = "../../slike/" + zivotinja.slika;
@@ -65,7 +65,7 @@ function ucitaj(){
         innerText="Logout";
         document.getElementsByClassName("loginIliLogout")[0].setAttribute("id", "odjava");
         document.getElementById("odjava").addEventListener('click', function(){
-           alert("Uspešno ste se odjavili");
+            alert("Logout successfull");
            localStorage.removeItem("ulogovaniKorisnik");
            document.getElementsByClassName("loginIliLogout")[0].removeAttribute("id");    window.location.href="index.html";
          
