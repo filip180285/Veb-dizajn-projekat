@@ -73,9 +73,9 @@ function ucitaj() {
             innerText = "Login";
 
         document.getElementById("dodajOvde").setAttribute("style", "height:396px;  font-size:16pt;");
-        document.getElementById("dodajOvde").innerHTML += '<div class="col-sm-2"></div><div class="col-sm-8 " style=" margin-top:4.2%; margin-left:6.4%; font-size:16pt;">&nbsp;  &nbsp;Žao nam je, morate se ulogovati &#8594; ' +
-            '<a href="prijava.html" style="text-decoration:none; color:#7FC8A9;">Uloguj se</a>' +
-            '<br>&nbsp;  &nbsp;Ukoliko niste kreirali nalog, to možete učiniti preko sledećeg linka &#8594; <a href="prijava.html" style="text-decoration:none; color:#7FC8A9;">Registruj se</a> &nbsp;  &nbsp;</div>';
+        document.getElementById("dodajOvde").innerHTML += '<div class="col-sm-2"></div><div class="col-sm-8 " style=" margin-top:4.2%; margin-left:6.4%; font-size:16pt;">&nbsp;  &nbsp;You must be logged in in order to leave a comment &#8594; ' +
+            '<a href="prijava.html" style="text-decoration:none; color:#7FC8A9;">Login</a>' +
+            '<br>&nbsp;  &nbsp;If you have not created an account, you can do so via the following link  &#8594; <a href="prijava.html" style="text-decoration:none; color:#7FC8A9;">Register</a> &nbsp;  &nbsp;</div>';
 
 
         document.getElementById("logovanje").addEventListener('click', function () {
