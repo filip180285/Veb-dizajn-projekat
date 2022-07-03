@@ -68,7 +68,7 @@ function ucitaj() {
 
 
             objekat = {
-                id: oglasi.length,
+                id: oglasi.length+1,
                 korisnik: kor,
                 naziv_zivotinje: naziv1,
                 opis: opis1,

@@ -52,7 +52,6 @@ function ucitaj() {
 
 
 }
-
 /*Generisanje pdf-a */
 function getPdf(id) {
     oglasi = JSON.parse(localStorage.getItem("oglasi"));
@@ -61,13 +60,15 @@ function getPdf(id) {
             element = elem;
         };
     });
+
     var doc = new jsPDF();
-    str = 'Naziv zivotinje: ' + element.naziv_zivotinje + '\n' + 'Opis:' + element.opis + "\n" + "Broj telefona:" + element.telefon;
-    doc.text(str, 10, 10)
-    doc.save('a4.pdf');
+    let ispis = 'OGLAS' + "\n\n" + 'Naziv životinje:' + element.naziv_zivotinje.replace(/ž/g, "z").replace(/š/g, "s").replace(/ć/g, "c").replace(/č/g, "c").replace(/đ/g, "dj");
+    ispis += "\n\n" + 'Opis:' + element.opis.replace(/ž/g, "z").replace(/š/g, "s").replace(/ć/g, "c").replace(/č/g, "c").replace(/đ/g, "dj");
+    ispis += "\n\n" + 'Broj telefona:' + element.telefon.replace(/ž/g, "z").replace(/š/g, "s").replace(/ć/g, "c").replace(/č/g, "c").replace(/đ/g, "dj");
+    doc.text(doc.splitTextToSize(ispis, 200), 6, 16);
+
+    doc.save('oglas.pdf');
 };
-
-
 
 
 function napisiKomentar(id) {

@@ -208,6 +208,7 @@ $(document).ready(function () {
 });
 
 function ucitaj(){ 
+    localStorage.setItem("SoloZivotinjaPutanja",JSON.stringify(0));
         if(localStorage.getItem("ulogovaniKorisnik")!=null) { 
             document.getElementsByClassName("loginIliLogout")[0].
             innerText="Odjavi se";

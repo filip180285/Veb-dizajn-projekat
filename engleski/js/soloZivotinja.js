@@ -25,10 +25,22 @@ $(document).ready(function () {
             vrsta = "Birds";
             break;}
     }
+    switch(vrsta){ 
+        case 'Dogs': nazivLinka="psi1.html";
+        break;
+        case 'Cats': nazivLinka='macke.html'; break;
+        case 'Birds': nazivLinka='ptice.html'; break;
+    }
 
-    $("#nazivStranice").text("/Pets" + "/" + vrsta + "/" + zivotinja.ime);
-   
-    
+    var putanja=JSON.parse(localStorage.getItem("SoloZivotinjaPutanja"));
+
+    if(putanja==1){ 
+    $("#nazivStranice").html("/<a style='text-decoration:none; color:white' href='zivotinje.html'>Pets</a>" + "/<a style='text-decoration:none; color:white' href='"+nazivLinka+"'>" + vrsta + "</a>/<a style='text-decoration:none; color:white' href='soloZivotinja.html'>" + zivotinja.ime+"</a>");
+    }
+    if(putanja==0){$("#nazivStranice").html("/<a style='text-decoration:none; color:white' href='index.html'>Home</a>"+"/<a style='text-decoration:none; color:white' href='soloZivotinja.html'>" + zivotinja.ime+"</a>");
+
+    }
+
     let putanjaDoSlike = "../../slike/" + zivotinja.slika;
     let putanjaDoVidea = "../../video/" + zivotinja.video;
     //alert(putanjaDoVidea);

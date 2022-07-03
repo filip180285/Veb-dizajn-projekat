@@ -25,10 +25,20 @@ $(document).ready(function () {
             vrsta = "Ptice";
             break;}
     }
+    switch(vrsta){ 
+        case 'Psi': nazivLinka="psi1.html";
+        break;
+        case 'Macke': nazivLinka='macke.html'; break;
+        case 'Ptice': nazivLinka='ptice.html'; break;
+    }
+    var putanja=JSON.parse(localStorage.getItem("SoloZivotinjaPutanja"));
 
-    $("#nazivStranice").text("/Životinje" + "/" + vrsta + "/" + zivotinja.ime);
-   
-    
+    if(putanja==1){ 
+    $("#nazivStranice").html("/<a style='text-decoration:none; color:white' href='zivotinje.html'>Životinje</a>" + "/<a style='text-decoration:none; color:white' href='"+nazivLinka+"'>" + vrsta + "</a>/<a style='text-decoration:none; color:white' href='soloZivotinja.html'>" + zivotinja.ime+"</a>");
+    }
+    if(putanja==0){$("#nazivStranice").html("/<a style='text-decoration:none; color:white' href='index.html'>Početna</a>"+"/<a style='text-decoration:none; color:white' href='soloZivotinja.html'>" + zivotinja.ime+"</a>");
+
+    }
     let putanjaDoSlike = "../../slike/" + zivotinja.slika;
     let putanjaDoVidea = "../../video/" + zivotinja.video;
     //alert(putanjaDoVidea);

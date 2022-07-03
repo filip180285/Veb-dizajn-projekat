@@ -16,6 +16,7 @@ $(document).ready(function () {
 
 
 function ucitaj(){ 
+    localStorage.setItem("SoloZivotinjaPutanja",JSON.stringify(1));
     if(localStorage.getItem("ulogovaniKorisnik")!=null) { 
         document.getElementsByClassName("loginIliLogout")[0].
         innerText="Logout";

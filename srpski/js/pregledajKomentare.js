@@ -3,10 +3,10 @@ function ucitaj() {
    var putanja=JSON.parse(localStorage.getItem("pregledKomentaraPutanja"));
 
    if(putanja==0){ 
-    document.getElementById("ubaciOvde").innerText="/Izgubljeni ljubimci/Pregled komentara";
+    document.getElementById("ubaciOvde").innerHTML="/<a style='text-decoration:none; color:white' href='izgubljeniLjubimci.html'>Izgubljeni ljubimci</a>/<a style='text-decoration:none; color:white' href='pregledajKomentare.html'>Pregled komentara</a>";
    }
    else{ 
-    document.getElementById("ubaciOvde").innerText="/Moj nalog/Pregled komentara";
+    document.getElementById("ubaciOvde").innerHTML="/<a style='text-decoration:none; color:white' href='mojNalog.html'>Moj nalog</a>/<a style='text-decoration:none; color:white' href='pregledajKomentare.html'>Pregled komentara</a>";
    }
     if (localStorage.getItem("ulogovaniKorisnik") != null) {
         document.getElementsByClassName("loginIliLogout")[0].
